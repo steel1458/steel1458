@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:20:28 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:45:55 by seunglee         ###   ########.fr       */
+/*   Created: 2021/09/18 12:50:32 by seunglee          #+#    #+#             */
+/*   Updated: 2021/09/18 12:52:23 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-	char	string;
+	char	num;
 
-	string = 'a';
-	while (string <= 'z')
+	num = '0';
+	while (num <= '9')
 	{
-		ft_putchar(string);
-		string++;
+		ft_putcahr(num);
+		num++;
 	}
 }

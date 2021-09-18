@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:20:28 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:45:55 by seunglee         ###   ########.fr       */
+/*   Created: 2021/09/18 19:59:18 by seunglee          #+#    #+#             */
+/*   Updated: 2021/09/18 20:11:17 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,27 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char	string;
-
-	string = 'a';
-	while (string <= 'z')
+	if (nb == -2147483648)
 	{
-		ft_putchar(string);
-		string++;
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		fr_putchar(-nb);
+	}
+	else
+	{
+		if (nb > 9)
+		{
+			ft_putchar(nb / 10);
+		}
+		ft_putchar(48 + nb % 10);
 	}
 }

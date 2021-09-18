@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:20:28 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:45:55 by seunglee         ###   ########.fr       */
+/*   Created: 2021/09/18 13:14:16 by seunglee          #+#    #+#             */
+/*   Updated: 2021/09/18 13:15:03 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	char	string;
+	char	i;
+	char	j;
 
-	string = 'a';
-	while (string <= 'z')
-	{
-		ft_putchar(string);
-		string++;
-	}
+	i = 'N';
+	j = 'P';
+	if (n < 0)
+		ft_putchar(i);
+	else
+		ft_putchar(j);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:20:28 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:45:55 by seunglee         ###   ########.fr       */
+/*   Created: 2021/09/18 18:27:29 by seunglee          #+#    #+#             */
+/*   Updated: 2021/09/18 19:53:36 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,29 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_comb2(void)
 {
-	char	string;
+	int	i;
+	int	j;
 
-	string = 'a';
-	while (string <= 'z')
+	i = 0;
+	while (i <= 98)
 	{
-		ft_putchar(string);
-		string++;
+		j = i;
+		while (++j <= 99)
+		{
+			ft_putchar((char)(i / 10) + '0');
+			ft_putchar((char)(i % 10) + '0');
+			ft_putchar(' ');
+			ft_putchar((char)(j / 10) + '0');
+			ft_putchar((char)(j % 10) + '0');
+			if ((i != 98))
+			{
+				write(1, ", ", 2);
+			}
+		}
 	}
 }

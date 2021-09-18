@@ -1,30 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 19:20:28 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:45:55 by seunglee         ###   ########.fr       */
+/*   Created: 2021/09/18 13:15:54 by seunglee          #+#    #+#             */
+/*   Updated: 2021/09/18 13:48:40 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_num(char a, char b, char c)
 {
-	write (1, &c, 1);
+	write(1, &a, 1);
+	write(1, &c, 1);
+	write(1, &c, 1);
+	if (a != '7' || b != '8' c != '9')
+	{
+		write(1, ", ", 2);
+	}	
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_comb(void)
 {
-	char	string;
+	char	d;
+	char	e;
+	char	f;
 
-	string = 'a';
-	while (string <= 'z')
+	d = '0';
+	while (d <= '7')
 	{
-		ft_putchar(string);
-		string++;
+		e = d + 1;
+		while (e <= '8')
+		{
+			f = e + 1;
+			while (f <= '9')
+			{
+				ft_num(d, e, f);
+				f++;
+			}
+			e++;
+		}
+		d++;
 	}
 }
