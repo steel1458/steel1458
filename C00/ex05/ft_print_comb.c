@@ -15,9 +15,9 @@
 void	ft_num(char a, char b, char c)
 {
 	write(1, &a, 1);
+	write(1, &b, 1);
 	write(1, &c, 1);
-	write(1, &c, 1);
-	if (a != '7' || b != '8' c != '9')
+	if (a != '7' || b != '8' || c != '9')
 	{
 		write(1, ", ", 2);
 	}	
@@ -25,24 +25,30 @@ void	ft_num(char a, char b, char c)
 
 void	ft_print_comb(void)
 {
-	char	d;
-	char	e;
-	char	f;
+	char a;
+	char b;
+	char c;
 
-	d = '0';
-	while (d <= '7')
+	a = '0';
+	while (a <= '7')
 	{
-		e = d + 1;
-		while (e <= '8')
+		b = a + 1;
+		while (b <= '8')
 		{
-			f = e + 1;
-			while (f <= '9')
+			c = b + 1;
+			while (c <= '9')
 			{
-				ft_num(d, e, f);
-				f++;
+				ft_num(a, b, c);
+				c++;
 			}
-			e++;
+			b++;
 		}
-		d++;
+		a++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb();
+	return(0);
 }
