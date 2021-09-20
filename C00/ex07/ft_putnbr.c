@@ -6,7 +6,7 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 19:59:18 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/20 11:13:30 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 13:48:49 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,22 @@ int	ft_putchar(char c)
 
 void	ft_putnbr(int n)
 {
-	if (n >= 10)
+	if (n == -2147483648)
 	{
 		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putchar('8');
+	}
+	else if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-n);
 	}
 	else
 	{
-		ft_putchar(n + '0');
+		if (n > 9)
+		{
+			ft_putnbr(n / 10);
+		}
+		ft_putchar(48 + n % 10);
 	}
 }
