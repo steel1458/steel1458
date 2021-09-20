@@ -6,7 +6,7 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 18:27:29 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 19:53:36 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 10:34:22 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,4 @@ void	ft_print_comb2(void)
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
 }

@@ -6,35 +6,27 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 19:59:18 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 20:11:17 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:13:30 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void		ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (0);
 }
 
-void		ft_putnbr(int nb)
+void	ft_putnbr(int n)
 {
-	if (nb == -2147483648)
+	if (n >= 10)
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		fr_putnbr(-nb);
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
 	else
 	{
-		if (nb > 9)
-		{
-			ft_putnbr(nb / 10);
-		}
-		ft_putchar(48 + nb % 10);
+		ft_putchar(n + '0');
 	}
 }

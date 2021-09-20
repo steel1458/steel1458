@@ -6,7 +6,7 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 12:50:32 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 12:52:23 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 12:07:23 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	ft_putchar(char c)
 
 void	ft_print_numbers(void)
 {
-	char num;
+	char	num;
 
 	num = '0';
 	while (num <= '9')
 	{
-		ft_putcahr(num);
+		ft_putchar(num);
 		num++;
 	}
 }

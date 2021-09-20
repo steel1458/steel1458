@@ -6,7 +6,7 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 13:15:54 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/18 13:48:40 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 12:07:51 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	ft_num(char a, char b, char c)
 
 void	ft_print_comb(void)
 {
-	char a;
-	char b;
-	char c;
+	char	a;
+	char	b;
+	char	c;
 
 	a = '0';
 	while (a <= '7')
@@ -45,10 +45,4 @@ void	ft_print_comb(void)
 		}
 		a++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb();
-	return(0);
 }
