@@ -6,11 +6,11 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:41:30 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/20 17:42:09 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/20 21:25:13 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;
 	*mod = a % b;

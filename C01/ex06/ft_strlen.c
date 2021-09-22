@@ -6,17 +6,16 @@
 /*   By: seunglee <seunglee@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 19:27:09 by seunglee          #+#    #+#             */
-/*   Updated: 2021/09/20 19:36:29 by seunglee         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:40:12 by seunglee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
 	int	i;
-	
+
 	i = 0;
-	len = 0;
-	while(str[i] != '\0')
+	while (str[i])
 		i++;
 	return (i);
 }
